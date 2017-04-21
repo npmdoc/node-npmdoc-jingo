@@ -1,0 +1,2937 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+    >jingo (v1.7.3)</a>
+</h1>
+<h4>A nodejs based wiki engine</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.jingo">module jingo</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jingo.configurable">
+            function <span class="apidocSignatureSpan">jingo.</span>configurable
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">jingo.</span>app</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">jingo.</span>components</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">jingo.</span>config</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">jingo.</span>configurable.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">jingo.</span>gitmech</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">jingo.</span>locker</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">jingo.</span>models</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">jingo.</span>renderer</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">jingo.</span>tools</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.jingo.app">module jingo.app</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jingo.app.getInstance">
+            function <span class="apidocSignatureSpan">jingo.app.</span>getInstance
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jingo.app.initialize">
+            function <span class="apidocSignatureSpan">jingo.app.</span>initialize
+            <span class="apidocSignatureSpan">(config)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.jingo.components">module jingo.components</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jingo.components.customScript">
+            function <span class="apidocSignatureSpan">jingo.components.</span>customScript
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jingo.components.customStyle">
+            function <span class="apidocSignatureSpan">jingo.components.</span>customStyle
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jingo.components.expire">
+            function <span class="apidocSignatureSpan">jingo.components.</span>expire
+            <span class="apidocSignatureSpan">(name)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jingo.components.footer">
+            function <span class="apidocSignatureSpan">jingo.components.</span>footer
+            <span class="apidocSignatureSpan">(cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jingo.components.footerAsync">
+            function <span class="apidocSignatureSpan">jingo.components.</span>footerAsync
+            <span class="apidocSignatureSpan">(_arg0, _arg1, _arg2)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jingo.components.hasCustomScript">
+            function <span class="apidocSignatureSpan">jingo.components.</span>hasCustomScript
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jingo.components.hasCustomStyle">
+            function <span class="apidocSignatureSpan">jingo.components.</span>hasCustomStyle
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jingo.components.hasFooter">
+            function <span class="apidocSignatureSpan">jingo.components.</span>hasFooter
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jingo.components.hasSidebar">
+            function <span class="apidocSignatureSpan">jingo.components.</span>hasSidebar
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jingo.components.sidebar">
+            function <span class="apidocSignatureSpan">jingo.components.</span>sidebar
+            <span class="apidocSignatureSpan">(cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jingo.components.sidebarAsync">
+            function <span class="apidocSignatureSpan">jingo.components.</span>sidebarAsync
+            <span class="apidocSignatureSpan">(_arg0, _arg1, _arg2)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.jingo.config">module jingo.config</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jingo.config.get">
+            function <span class="apidocSignatureSpan">jingo.config.</span>get
+            <span class="apidocSignatureSpan">(key, useDefaults)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jingo.config.getError">
+            function <span class="apidocSignatureSpan">jingo.config.</span>getError
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jingo.config.getProxyPath">
+            function <span class="apidocSignatureSpan">jingo.config.</span>getProxyPath
+            <span class="apidocSignatureSpan">(override)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jingo.config.load">
+            function <span class="apidocSignatureSpan">jingo.config.</span>load
+            <span class="apidocSignatureSpan">(filename)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jingo.config.sample">
+            function <span class="apidocSignatureSpan">jingo.config.</span>sample
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jingo.config.setup">
+            function <span class="apidocSignatureSpan">jingo.config.</span>setup
+            <span class="apidocSignatureSpan">(setup)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jingo.config.validate">
+            function <span class="apidocSignatureSpan">jingo.config.</span>validate
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">jingo.config.</span>defaults</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.jingo.configurable">module jingo.configurable</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jingo.configurable.configurable">
+            function <span class="apidocSignatureSpan">jingo.</span>configurable
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.jingo.configurable.prototype">module jingo.configurable.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jingo.configurable.prototype.configOverride">
+            function <span class="apidocSignatureSpan">jingo.configurable.prototype.</span>configOverride
+            <span class="apidocSignatureSpan">(snippet)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jingo.configurable.prototype.getConfig">
+            function <span class="apidocSignatureSpan">jingo.configurable.prototype.</span>getConfig
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jingo.configurable.prototype.getProxyPath">
+            function <span class="apidocSignatureSpan">jingo.configurable.prototype.</span>getProxyPath
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.jingo.gitmech">module jingo.gitmech</a><ol>
+
+        <li>
+
+            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">jingo.gitmech.</span>pulling</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">jingo.gitmech.</span>pushing</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">jingo.gitmech.</span>shouldPush</span>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jingo.gitmech.absPath">
+            function <span class="apidocSignatureSpan">jingo.gitmech.</span>absPath
+            <span class="apidocSignatureSpan">(path)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jingo.gitmech.add">
+            function <span class="apidocSignatureSpan">jingo.gitmech.</span>add
+            <span class="apidocSignatureSpan">(path, message, author, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jingo.gitmech.commit">
+            function <span class="apidocSignatureSpan">jingo.gitmech.</span>commit
+            <span class="apidocSignatureSpan">(path, message, author, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jingo.gitmech.diff">
+            function <span class="apidocSignatureSpan">jingo.gitmech.</span>diff
+            <span class="apidocSignatureSpan">(path, revisions, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jingo.gitmech.grep">
+            function <span class="apidocSignatureSpan">jingo.gitmech.</span>grep
+            <span class="apidocSignatureSpan">(pattern, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jingo.gitmech.hashes">
+            function <span class="apidocSignatureSpan">jingo.gitmech.</span>hashes
+            <span class="apidocSignatureSpan">(path, howMany, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jingo.gitmech.lastMessage">
+            function <span class="apidocSignatureSpan">jingo.gitmech.</span>lastMessage
+            <span class="apidocSignatureSpan">(path, revision, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jingo.gitmech.log">
+            function <span class="apidocSignatureSpan">jingo.gitmech.</span>log
+            <span class="apidocSignatureSpan">(path, version, howMany, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jingo.gitmech.ls">
+            function <span class="apidocSignatureSpan">jingo.gitmech.</span>ls
+            <span class="apidocSignatureSpan">(pattern, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jingo.gitmech.mv">
+            function <span class="apidocSignatureSpan">jingo.gitmech.</span>mv
+            <span class="apidocSignatureSpan">(path, newPath, message, author, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jingo.gitmech.pull">
+            function <span class="apidocSignatureSpan">jingo.gitmech.</span>pull
+            <span class="apidocSignatureSpan">(callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jingo.gitmech.push">
+            function <span class="apidocSignatureSpan">jingo.gitmech.</span>push
+            <span class="apidocSignatureSpan">(callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jingo.gitmech.remoteExists">
+            function <span class="apidocSignatureSpan">jingo.gitmech.</span>remoteExists
+            <span class="apidocSignatureSpan">(remote, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jingo.gitmech.revert">
+            function <span class="apidocSignatureSpan">jingo.gitmech.</span>revert
+            <span class="apidocSignatureSpan">(path, revision, author, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jingo.gitmech.rm">
+            function <span class="apidocSignatureSpan">jingo.gitmech.</span>rm
+            <span class="apidocSignatureSpan">(path, message, author, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jingo.gitmech.setup">
+            function <span class="apidocSignatureSpan">jingo.gitmech.</span>setup
+            <span class="apidocSignatureSpan">(gitBin, repoDir, repoDocSubdir, refspec, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jingo.gitmech.show">
+            function <span class="apidocSignatureSpan">jingo.gitmech.</span>show
+            <span class="apidocSignatureSpan">(path, version, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">jingo.gitmech.</span>branch</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">jingo.gitmech.</span>gitBin</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">jingo.gitmech.</span>remote</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.jingo.locker">module jingo.locker</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jingo.locker.count">
+            function <span class="apidocSignatureSpan">jingo.locker.</span>count
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jingo.locker.getLock">
+            function <span class="apidocSignatureSpan">jingo.locker.</span>getLock
+            <span class="apidocSignatureSpan">(page)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jingo.locker.lock">
+            function <span class="apidocSignatureSpan">jingo.locker.</span>lock
+            <span class="apidocSignatureSpan">(page, user)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jingo.locker.purge">
+            function <span class="apidocSignatureSpan">jingo.locker.</span>purge
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jingo.locker.reset">
+            function <span class="apidocSignatureSpan">jingo.locker.</span>reset
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jingo.locker.unlock">
+            function <span class="apidocSignatureSpan">jingo.locker.</span>unlock
+            <span class="apidocSignatureSpan">(page)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">jingo.locker.</span>purgeTime</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">jingo.locker.</span>locks</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.jingo.models">module jingo.models</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jingo.models.Page">
+            function <span class="apidocSignatureSpan">jingo.models.</span>Page
+            <span class="apidocSignatureSpan">(name, revision)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jingo.models.Pages">
+            function <span class="apidocSignatureSpan">jingo.models.</span>Pages
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jingo.models.use">
+            function <span class="apidocSignatureSpan">jingo.models.</span>use
+            <span class="apidocSignatureSpan">(git)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">jingo.models.</span>pages</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">jingo.models.</span>repositories</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.jingo.renderer">module jingo.renderer</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jingo.renderer.render">
+            function <span class="apidocSignatureSpan">jingo.renderer.</span>render
+            <span class="apidocSignatureSpan">(content)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.jingo.tools">module jingo.tools</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jingo.tools.hashify">
+            function <span class="apidocSignatureSpan">jingo.tools.</span>hashify
+            <span class="apidocSignatureSpan">(str)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jingo.tools.isAuthorized">
+            function <span class="apidocSignatureSpan">jingo.tools.</span>isAuthorized
+            <span class="apidocSignatureSpan">(email, pattern, emptyEmailMatches)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.jingo" id="apidoc.module.jingo">module jingo</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.jingo.configurable" id="apidoc.element.jingo.configurable">
+        function <span class="apidocSignatureSpan">jingo.</span>configurable
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">configurable = function () {
+  this.config = {}
+  this.overrides = {}
+  this.configObject = configObject
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.jingo.app" id="apidoc.module.jingo.app">module jingo.app</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.jingo.app.getInstance" id="apidoc.element.jingo.app.getInstance">
+        function <span class="apidocSignatureSpan">jingo.app.</span>getInstance
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getInstance = function () {
+  if (!app) {
+    throw new Error(&#x27;Cannot get an instance of an unitialized App&#x27;)
+  }
+  return app
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jingo.app.initialize" id="apidoc.element.jingo.app.initialize">
+        function <span class="apidocSignatureSpan">jingo.app.</span>initialize
+        <span class="apidocSignatureSpan">(config)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">initialize = function (config) {
+  app = express()
+
+  app.locals.config = config
+
+  app.locals.baseUrl = &#x27;//&#x27; + config.get(&#x27;server&#x27;).hostname + &#x27;:&#x27; + config.get(&#x27;server&#x27;).port
+
+  if (config.get(&#x27;server&#x27;).baseUrl === &#x27;&#x27;) {
+    app.locals.baseUrl = &#x27;//&#x27; + config.get(&#x27;server&#x27;).hostname + &#x27;:&#x27; + config.get(&#x27;server&#x27;).port
+  } else {
+    app.locals.baseUrl = config.get(&#x27;server&#x27;).baseUrl
+  }
+
+  // View helpers
+  app.use(function (req, res, next) {
+    res.locals = {
+      get user () {
+        return req.user
+      },
+      get appTitle () {
+        return config.get(&#x27;application&#x27;).title
+      },
+      get proxyPath () {
+        return config.getProxyPath()
+      },
+      get jingoVersion () {
+        return program.version()
+      },
+      get authentication () {
+        return config.get(&#x27;authentication&#x27;)
+      },
+      isAnonymous: function () {
+        return !req.user
+      },
+      canSearch: function () {
+        return !!req.user || app.locals.config.get(&#x27;authorization&#x27;).anonRead
+      },
+      gravatar: function (email) {
+        return gravatar
+      },
+      get isAjax () {
+        return req.headers[&#x27;x-requested-with&#x27;] &#x26;&#x26; req.headers[&#x27;x-requested-with&#x27;] === &#x27;XMLHttpRequest&#x27;
+      }
+    }
+    next()
+  })
+
+  app.locals.coalesce = function (value, def) {
+    return typeof value === &#x27;undefined&#x27; ? def : value
+  }
+
+  app.locals.pretty = true // Pretty HTML output from Jade
+
+  app.locals.hasSidebar = components.hasSidebar
+  app.locals.hasFooter = components.hasFooter
+  app.locals.hasCustomStyle = components.hasCustomStyle
+  app.locals.hasCustomScript = components.hasCustomScript
+  app.locals.hasFeature = function (feature) {
+    return !!app.locals.config.get(&#x27;features&#x27;)[feature]
+  }
+
+  if (components.hasCustomStyle()) {
+    console.log(&#x27;Using custom style &#x27; + config.get(&#x27;customizations&#x27;)[&#x27;style&#x27;])
+  }
+
+  if (components.hasCustomScript()) {
+    console.log(&#x27;Using custom script &#x27; + config.get(&#x27;customizations&#x27;)[&#x27;script&#x27;])
+  }
+
+  app.enable(&#x27;trust proxy&#x27;)
+  if (config.get(&#x27;application&#x27;).loggingMode) {
+    app.use(logger(config.get(&#x27;application&#x27;).loggingMode == 1 ? &#x27;combined&#x27; : &#x27;dev&#x27;, {skip: function () { }})) // eslint-disable-
+line eqeqeq
+  }
+  app.use(favicon(path.join(__dirname + &#x27;/../&#x27;, &#x27;public&#x27;, &#x27;favicon.ico&#x27;))) // eslint-disable-line no-path-concat
+  app.use(bodyParser.urlencoded({extended: true, limit: &#x27;500kb&#x27;}))
+  app.use(methodOverride(function (req, res) {
+    if (req.body &#x26;&#x26; typeof req.body === &#x27;object&#x27; &#x26;&#x26; &#x27;_method&#x27; in req.body) {
+      // look in urlencoded POST bodies and delete it
+      var method = req.body._method
+      delete req.body._method
+      return method
+    }
+  }))
+
+  app.use(express.static(path.join(__dirname + &#x27;/../&#x27;, &#x27;public&#x27;))) // eslint-disable-line no-path-concat
+  app.use(cookieParser())
+  app.use(cookieSession({
+    name: &#x27;JingoSession&#x27;,
+    keys: [&#x27;jingo&#x27;],
+    cookie: { maxAge: 30 * 24 * 60 * 60 * 1000 }
+  }))
+  app.use(session({ name: &#x27;jingosid&#x27;,
+                    secret: config.get(&#x27;application&#x27;).secret,
+                    cookie: { httpOnly: true },
+                    saveUninitialized: true,
+                    resave: true
+                  }))
+  app.use(flash())
+  app.use(expValidator())
+
+  app.set(&#x27;views&#x27;, __dirname + &#x27;/../views&#x27;) // eslint-disable-line no-path-concat
+  app.set(&#x27;view engine&#x27;, &#x27;jade&#x27;)
+
+  // Read this before disabling it https://github.com/strongloop/express/pull/2813#issuecomment-159270428
+  app.set(&#x27;x-powered-by&#x27;, true)
+
+  app.use(function (req, res, next) {
+    res.locals._style = components.customStyle()
+    res.locals._script = components.customScript()
+
+    if (/^\/auth\//.test(req.url) ||
+        /^\/misc\//.test(req.url) ||
+        (/^\/login/.test(req.url) &#x26;&#x26; !config.get(&#x27;authorization&#x27;).anonRead)
+       ) {
+      return next()
+    }
+
+    components.sidebarAsync().then(function (content) {
+      res.locals._sidebar = content
+      return components.footerAsync()
+    }).then(function (content) {
+      res.locals._footer = content
+      return next()
+    }).catch(function (e) {
+      console.log(e)
+    })
+  })
+
+  app.use(passport.initialize())
+  app.use(passport.session() ...</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+            process.exit(-1)
+          }
+
+          start()
+        })
+
+function start () {
+var app = require(&#x27;./lib/app&#x27;).<span class="apidocCodeKeywordSpan">initialize</span>(config)
+
+var listenAddr = process.env.NW_ADDR || &#x27;&#x27;
+if (config.get(&#x27;server&#x27;).localOnly) {
+  listenAddr = &#x27;localhost&#x27;
+}
+
+http.createServer(app).listen(config.get(&#x27;server&#x27;).port, listenAddr, function () {
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.jingo.components" id="apidoc.module.jingo.components">module jingo.components</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.jingo.components.customScript" id="apidoc.element.jingo.components.customScript">
+        function <span class="apidocSignatureSpan">jingo.components.</span>customScript
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">customScript = function () {
+  // Read sync because this info is needed by the layout
+  return find(&#x27;script&#x27;).fetchSync()
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  app.set(&#x27;view engine&#x27;, &#x27;jade&#x27;)
+
+  // Read this before disabling it https://github.com/strongloop/express/pull/2813#issuecomment-159270428
+  app.set(&#x27;x-powered-by&#x27;, true)
+
+  app.use(function (req, res, next) {
+res.locals._style = components.customStyle()
+res.locals._script = components.<span class="apidocCodeKeywordSpan">customScript</span>()
+
+if (/^\/auth\//.test(req.url) ||
+    /^\/misc\//.test(req.url) ||
+    (/^\/login/.test(req.url) &#x26;&#x26; !config.get(&#x27;authorization&#x27;).anonRead)
+   ) {
+  return next()
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jingo.components.customStyle" id="apidoc.element.jingo.components.customStyle">
+        function <span class="apidocSignatureSpan">jingo.components.</span>customStyle
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">customStyle = function () {
+  // Read sync because this info is needed by the layout
+  return find(&#x27;style&#x27;).fetchSync()
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  app.set(&#x27;views&#x27;, __dirname + &#x27;/../views&#x27;) // eslint-disable-line no-path-concat
+  app.set(&#x27;view engine&#x27;, &#x27;jade&#x27;)
+
+  // Read this before disabling it https://github.com/strongloop/express/pull/2813#issuecomment-159270428
+  app.set(&#x27;x-powered-by&#x27;, true)
+
+  app.use(function (req, res, next) {
+res.locals._style = components.<span class="apidocCodeKeywordSpan">customStyle</span>()
+res.locals._script = components.customScript()
+
+if (/^\/auth\//.test(req.url) ||
+    /^\/misc\//.test(req.url) ||
+    (/^\/login/.test(req.url) &#x26;&#x26; !config.get(&#x27;authorization&#x27;).anonRead)
+   ) {
+  return next()
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jingo.components.expire" id="apidoc.element.jingo.components.expire">
+        function <span class="apidocSignatureSpan">jingo.components.</span>expire
+        <span class="apidocSignatureSpan">(name)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">expire = function (name) {
+  find(name).cache = null
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jingo.components.footer" id="apidoc.element.jingo.components.footer">
+        function <span class="apidocSignatureSpan">jingo.components.</span>footer
+        <span class="apidocSignatureSpan">(cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">footer = function (cb) {
+  find(&#x27;footer&#x27;).fetchAsync(cb)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jingo.components.footerAsync" id="apidoc.element.jingo.components.footerAsync">
+        function <span class="apidocSignatureSpan">jingo.components.</span>footerAsync
+        <span class="apidocSignatureSpan">(_arg0, _arg1, _arg2)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">footerAsync = function (_arg0, _arg1, _arg2) {
+    &#x27;use strict&#x27;;
+    var len = arguments.length;
+    var promise = new Promise(INTERNAL);
+    promise._captureStackTrace();
+    var nodeback = nodebackForPromise(promise);
+    var ret;
+    var callback = tryCatch(fn);
+    switch(len) {
+        case 0:ret = callback.call(receiver, nodeback); break;
+case 1:ret = callback.call(receiver, _arg0, nodeback); break;
+case 2:ret = callback.call(receiver, _arg0, _arg1, nodeback); break;
+case 3:ret = callback.call(receiver, _arg0, _arg1, _arg2, nodeback); break;
+
+default:
+    var args = new Array(len + 1);
+    var i = 0;
+    for (var i = 0; i &#x3c; len; ++i) {
+       args[i] = arguments[i];
+    }
+    args[i] = nodeback;
+    ret = callback.apply(receiver, args);
+
+    break;
+
+    }
+    if (ret === errorObj) {
+        promise._rejectCallback(maybeWrapAsError(ret.e), true, true);
+    }
+    return promise;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+      (/^\/login/.test(req.url) &#x26;&#x26; !config.get(&#x27;authorization&#x27;).anonRead)
+     ) {
+    return next()
+  }
+
+  components.sidebarAsync().then(function (content) {
+    res.locals._sidebar = content
+    return components.<span class="apidocCodeKeywordSpan">footerAsync</span>()
+  }).then(function (content) {
+    res.locals._footer = content
+    return next()
+  }).catch(function (e) {
+    console.log(e)
+  })
+})
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jingo.components.hasCustomScript" id="apidoc.element.jingo.components.hasCustomScript">
+        function <span class="apidocSignatureSpan">jingo.components.</span>hasCustomScript
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">hasCustomScript = function () {
+  return find(&#x27;script&#x27;).exists()
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  return !!app.locals.config.get(&#x27;features&#x27;)[feature]
+}
+
+if (components.hasCustomStyle()) {
+  console.log(&#x27;Using custom style &#x27; + config.get(&#x27;customizations&#x27;)[&#x27;style&#x27;])
+}
+
+if (components.<span class="apidocCodeKeywordSpan">hasCustomScript</span>()) {
+  console.log(&#x27;Using custom script &#x27; + config.get(&#x27;customizations&#x27;)[&#x27;script&#x27;])
+}
+
+app.enable(&#x27;trust proxy&#x27;)
+if (config.get(&#x27;application&#x27;).loggingMode) {
+  app.use(logger(config.get(&#x27;application&#x27;).loggingMode == 1 ? &#x27;combined&#x27; : &#x27;dev&#x27;, {skip: function () { }})) //
+eslint-disable-line eqeqeq
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jingo.components.hasCustomStyle" id="apidoc.element.jingo.components.hasCustomStyle">
+        function <span class="apidocSignatureSpan">jingo.components.</span>hasCustomStyle
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">hasCustomStyle = function () {
+  return find(&#x27;style&#x27;).exists()
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+app.locals.hasFooter = components.hasFooter
+app.locals.hasCustomStyle = components.hasCustomStyle
+app.locals.hasCustomScript = components.hasCustomScript
+app.locals.hasFeature = function (feature) {
+  return !!app.locals.config.get(&#x27;features&#x27;)[feature]
+}
+
+if (components.<span class="apidocCodeKeywordSpan">hasCustomStyle</span>()) {
+  console.log(&#x27;Using custom style &#x27; + config.get(&#x27;customizations&#x27;)[&#x27;style&#x27;])
+}
+
+if (components.hasCustomScript()) {
+  console.log(&#x27;Using custom script &#x27; + config.get(&#x27;customizations&#x27;)[&#x27;script&#x27;])
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jingo.components.hasFooter" id="apidoc.element.jingo.components.hasFooter">
+        function <span class="apidocSignatureSpan">jingo.components.</span>hasFooter
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">hasFooter = function () {
+  return find(&#x27;footer&#x27;).exists()
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jingo.components.hasSidebar" id="apidoc.element.jingo.components.hasSidebar">
+        function <span class="apidocSignatureSpan">jingo.components.</span>hasSidebar
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">hasSidebar = function () {
+  return find(&#x27;sidebar&#x27;).exists()
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jingo.components.sidebar" id="apidoc.element.jingo.components.sidebar">
+        function <span class="apidocSignatureSpan">jingo.components.</span>sidebar
+        <span class="apidocSignatureSpan">(cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">sidebar = function (cb) {
+  find(&#x27;sidebar&#x27;).fetchAsync(cb)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jingo.components.sidebarAsync" id="apidoc.element.jingo.components.sidebarAsync">
+        function <span class="apidocSignatureSpan">jingo.components.</span>sidebarAsync
+        <span class="apidocSignatureSpan">(_arg0, _arg1, _arg2)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">sidebarAsync = function (_arg0, _arg1, _arg2) {
+    &#x27;use strict&#x27;;
+    var len = arguments.length;
+    var promise = new Promise(INTERNAL);
+    promise._captureStackTrace();
+    var nodeback = nodebackForPromise(promise);
+    var ret;
+    var callback = tryCatch(fn);
+    switch(len) {
+        case 0:ret = callback.call(receiver, nodeback); break;
+case 1:ret = callback.call(receiver, _arg0, nodeback); break;
+case 2:ret = callback.call(receiver, _arg0, _arg1, nodeback); break;
+case 3:ret = callback.call(receiver, _arg0, _arg1, _arg2, nodeback); break;
+
+default:
+    var args = new Array(len + 1);
+    var i = 0;
+    for (var i = 0; i &#x3c; len; ++i) {
+       args[i] = arguments[i];
+    }
+    args[i] = nodeback;
+    ret = callback.apply(receiver, args);
+
+    break;
+
+    }
+    if (ret === errorObj) {
+        promise._rejectCallback(maybeWrapAsError(ret.e), true, true);
+    }
+    return promise;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+if (/^\/auth\//.test(req.url) ||
+    /^\/misc\//.test(req.url) ||
+    (/^\/login/.test(req.url) &#x26;&#x26; !config.get(&#x27;authorization&#x27;).anonRead)
+   ) {
+  return next()
+}
+
+components.<span class="apidocCodeKeywordSpan">sidebarAsync</span>().then(function (content) {
+  res.locals._sidebar = content
+  return components.footerAsync()
+}).then(function (content) {
+  res.locals._footer = content
+  return next()
+}).catch(function (e) {
+  console.log(e)
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.jingo.config" id="apidoc.module.jingo.config">module jingo.config</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.jingo.config.get" id="apidoc.element.jingo.config.get">
+        function <span class="apidocSignatureSpan">jingo.config.</span>get
+        <span class="apidocSignatureSpan">(key, useDefaults)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">get = function (key, useDefaults) {
+  if (!config &#x26;&#x26; !useDefaults) {
+    throw new Error(&#x27;The configuration has not been read and cannot be `get`&#x27;)
+  }
+
+  if (!config &#x26;&#x26; useDefaults) {
+    return this.defaults[key]
+  }
+
+  if (typeof key === &#x27;undefined&#x27;) {
+    return config
+  }
+
+  return config[key]
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+}
+
+if (!config.validate()) {
+  console.log(&#x27;Error: &#x27; + config.getError())
+  process.exit(-1)
+}
+
+var refspec = config.<span class="apidocCodeKeywordSpan">get</span>(&#x27;application&#x27;).remote.split(/\s+/)
+
+Git.setup(config.get(&#x27;application&#x27;).git,
+config.get(&#x27;application&#x27;).repository,
+config.get(&#x27;application&#x27;).docSubdir,
+refspec, function (err, version) {
+  if (err) {
+    console.log(err)
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jingo.config.getError" id="apidoc.element.jingo.config.getError">
+        function <span class="apidocSignatureSpan">jingo.config.</span>getError
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getError = function () {
+  return error
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+if (!program.config || !fs.existsSync(program.config)) {
+  program.help()
+  process.exit(-1)
+}
+
+if (!config.load(program.config)) {
+  console.log(&#x27;Error: &#x27; + config.<span class="apidocCodeKeywordSpan">getError</span>())
+  process.exit(-1)
+}
+
+if (!config.validate()) {
+  console.log(&#x27;Error: &#x27; + config.getError())
+  process.exit(-1)
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jingo.config.getProxyPath" id="apidoc.element.jingo.config.getProxyPath">
+        function <span class="apidocSignatureSpan">jingo.config.</span>getProxyPath
+        <span class="apidocSignatureSpan">(override)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getProxyPath = function (override) {
+  var path = (override || this.get(&#x27;application&#x27;, true).proxyPath).trim()
+
+  // @TODO make sure the path is something that makes sense (?)
+  if (path.length === 0 || path === &#x27;/&#x27;) {
+    return &#x27;&#x27;
+  }
+
+  if (path.charAt(0) !== &#x27;/&#x27;) {
+    path = &#x27;/&#x27; + path
+  }
+
+  return path
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+get user () {
+  return req.user
+},
+get appTitle () {
+  return config.get(&#x27;application&#x27;).title
+},
+get proxyPath () {
+  return config.<span class="apidocCodeKeywordSpan">getProxyPath</span>()
+},
+get jingoVersion () {
+  return program.version()
+},
+get authentication () {
+  return config.get(&#x27;authentication&#x27;)
+},
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jingo.config.load" id="apidoc.element.jingo.config.load">
+        function <span class="apidocSignatureSpan">jingo.config.</span>load
+        <span class="apidocSignatureSpan">(filename)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">load = function (filename) {
+  this.setup(yaml.load(fs.readFileSync(filename).toString()))
+
+  if (!config.application || !config.server) {
+    error = &#x27;Missing `application` or `server` config section.&#x27;
+    return false
+  }
+
+  // Find any alien configuration options section
+  var aliens = _.difference(Object.keys(config), Object.keys(this.defaults))
+  if (aliens.length &#x3e; 0) {
+    error = &#x27;Unrecognized section name(s) &#x27; + aliens.join(&#x27;,&#x27;)
+    return false
+  }
+
+  // Find any alien configuration options section name
+  var keys = Object.keys(this.defaults)
+  for (var i = 0; i &#x3c; keys.length; i++) {
+    if (typeof config[keys[i]] === &#x27;undefined&#x27;) {
+      continue
+    }
+    aliens = _.difference(Object.keys(config[keys[i]]), Object.keys(this.defaults[keys[i]]))
+    if (aliens.length &#x3e; 0) {
+      error = &#x27;Unrecognized configuration option(s) &#x27; + aliens.join(&#x27;,&#x27;) + &#x27; in section &#x27; + keys[i]
+      return false
+    }
+  }
+
+  return true
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+}
+
+if (!program.config || !fs.existsSync(program.config)) {
+program.help()
+process.exit(-1)
+}
+
+if (!config.<span class="apidocCodeKeywordSpan">load</span>(program.config)) {
+console.log(&#x27;Error: &#x27; + config.getError())
+process.exit(-1)
+}
+
+if (!config.validate()) {
+console.log(&#x27;Error: &#x27; + config.getError())
+process.exit(-1)
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jingo.config.sample" id="apidoc.element.jingo.config.sample">
+        function <span class="apidocSignatureSpan">jingo.config.</span>sample
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">sample = function () {
+  var defs = _.clone(this.defaults)
+
+  // Removes deprecated auth method
+  delete defs.authentication.alone
+
+  return &#x27;---\n&#x27; +
+    &#x27;# Configuration sample file for Jingo (YAML)\n&#x27; +
+    yaml.dump(defs)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+       .option(&#x27;-c, --config &#x3c;path&#x3e;&#x27;, &#x27;Specify the config file&#x27;)
+       .option(&#x27;-#, --hash-string &#x3c;string&#x3e;&#x27;, &#x27;Create an hash for a string&#x27;)
+       .option(&#x27;-l, --local&#x27;, &#x27;Listen on localhost only&#x27;)
+       .option(&#x27;-s, --sample-config&#x27;, &#x27;Dumps a config file template and exits&#x27;)
+       .parse(process.argv)
+
+if (program.sampleConfig) {
+  console.log(config.<span class="apidocCodeKeywordSpan">sample</span>())
+  process.exit(0)
+}
+
+if (program.hashString) {
+  console.log(tools.hashify(program.hashString))
+  process.exit(0)
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jingo.config.setup" id="apidoc.element.jingo.config.setup">
+        function <span class="apidocSignatureSpan">jingo.config.</span>setup
+        <span class="apidocSignatureSpan">(setup)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">setup = function (setup) {
+  config = setup
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+if (!config.validate()) {
+  console.log(&#x27;Error: &#x27; + config.getError())
+  process.exit(-1)
+}
+
+var refspec = config.get(&#x27;application&#x27;).remote.split(/\s+/)
+
+Git.<span class="apidocCodeKeywordSpan">setup</span>(config.get(&#x27;application&#x27;).git,
+config.get(&#x27;application&#x27;).repository,
+config.get(&#x27;application&#x27;).docSubdir,
+refspec, function (err, version) {
+  if (err) {
+    console.log(err)
+    process.exit(-1)
+  }
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jingo.config.validate" id="apidoc.element.jingo.config.validate">
+        function <span class="apidocSignatureSpan">jingo.config.</span>validate
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">validate = function () {
+  config.application = _.extend({}, this.defaults.application, config.application)
+  config.application.pushInterval = (parseInt(config.application.pushInterval, 10) | 0)
+
+  config.authentication = _.extend({}, this.defaults.authentication, config.authentication)
+
+  if (!config.authentication.google.enabled &#x26;&#x26;
+    !config.authentication.github.enabled &#x26;&#x26;
+    !config.authentication.ldap.enabled &#x26;&#x26;
+    !config.authentication.alone.enabled &#x26;&#x26;
+    !config.authentication.local.enabled
+  ) {
+    error = &#x27;No authentication method provided.&#x27;
+    return false
+  }
+
+  if (config.authentication.google.enabled &#x26;&#x26; (!config.authentication.google.clientId || !config.authentication.google.clientSecret
+)) {
+    error = &#x27;Invalid or missing authentication credentials for Google (clientId and/or clientSecret).&#x27;
+    return false
+  }
+
+  if (config.authentication.github.enabled &#x26;&#x26; (!config.authentication.github.clientId || !config.authentication.github.clientSecret
+)) {
+    error = &#x27;Invalid or missing authentication credentials for Github (clientId and/or clientSecret).&#x27;
+    return false
+  }
+
+  if (config.authentication.ldap.enabled &#x26;&#x26; (!config.authentication.ldap.url || !config.authentication.ldap.searchBase || !config
+.authentication.ldap.searchFilter)) {
+    error = &#x27;Invalid or missing config for LDAP (url and/or searchBase and/or searchFilter).&#x27;
+    return false
+  }
+
+  if (config.authentication.alone.enabled &#x26;&#x26; config.authentication.local.enabled) {
+    error = &#x27;Alone and Local authentication cannot be used at the same time&#x27;
+    return false
+  }
+
+  if (config.authentication.alone.enabled) {
+    console.warn(&#x27;Deprecation: Alone authentication is deprecated and should be changed with Local.&#x27;)
+  }
+
+  config.features = _.extend({}, this.defaults.features, config.features)
+
+  // For backward compatibility with version &#x3c; 0.5, we set markitup as the
+  // default rich editor. For new installations, the default is codemirror
+  if (!config.features.markitup &#x26;&#x26; !config.features.codemirror) {
+    config.features.markitup = true
+  }
+
+  if (config.features.markitup &#x26;&#x26; config.features.codemirror) {
+    config.features.markitup = false
+  }
+
+  config.server = _.extend({}, this.defaults.server, config.server)
+
+  config.authorization = _.extend({}, this.defaults.authorization, config.authorization)
+
+  if (config.pages) {
+    config.pages = _.extend({}, this.defaults.pages, config.pages)
+
+    if (!config.pages.title.fromFilename &#x26;&#x26; !config.pages.title.fromContent) {
+      config.pages.title.fromFilename = true
+    }
+
+    if (config.pages.title.fromFilename &#x26;&#x26; config.pages.title.fromContent) {
+      config.pages.title.fromFilename = true
+    }
+  } else {
+    config.pages = _.extend({}, this.defaults.pages, config.pages)
+    // If the pages config key is not present, we desume that the user has
+    // upgraded Jingo but not the config file so we need to maintain the &#x22;old&#x22;
+    // behavior
+    config.pages.index = &#x27;home&#x27;
+    config.pages.title.fromFilename = false
+    config.pages.title.fromContent = true
+    config.pages.title.asciiOnly = true
+  }
+
+  config.customizations = _.extend({}, this.defaults.customizations, config.customizations)
+
+  return true
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+}
+
+if (!config.load(program.config)) {
+  console.log(&#x27;Error: &#x27; + config.getError())
+  process.exit(-1)
+}
+
+if (!config.<span class="apidocCodeKeywordSpan">validate</span>()) {
+  console.log(&#x27;Error: &#x27; + config.getError())
+  process.exit(-1)
+}
+
+var refspec = config.get(&#x27;application&#x27;).remote.split(/\s+/)
+
+Git.setup(config.get(&#x27;application&#x27;).git,
+...</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.jingo.configurable" id="apidoc.module.jingo.configurable">module jingo.configurable</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.jingo.configurable.configurable" id="apidoc.element.jingo.configurable.configurable">
+        function <span class="apidocSignatureSpan">jingo.</span>configurable
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">configurable = function () {
+  this.config = {}
+  this.overrides = {}
+  this.configObject = configObject
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.jingo.configurable.prototype" id="apidoc.module.jingo.configurable.prototype">module jingo.configurable.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.jingo.configurable.prototype.configOverride" id="apidoc.element.jingo.configurable.prototype.configOverride">
+        function <span class="apidocSignatureSpan">jingo.configurable.prototype.</span>configOverride
+        <span class="apidocSignatureSpan">(snippet)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">configOverride = function (snippet) {
+  this.overrides = snippet ? _.extend(this.overrides, snippet) : {}
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jingo.configurable.prototype.getConfig" id="apidoc.element.jingo.configurable.prototype.getConfig">
+        function <span class="apidocSignatureSpan">jingo.configurable.prototype.</span>getConfig
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getConfig = function () {
+  try {
+    // The config has been already loaded somewhere else
+    this.config = _.clone(configObject.get(), true)
+  } catch (e) {
+    this.config = _.clone(configObject.defaults, true)
+  }
+
+  return _.merge(this.config, this.overrides)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+this._exists = false
+Configurable.call(this)
+}
+
+Component.prototype = Object.create(Configurable.prototype)
+
+Component.prototype.exists = function () {
+this.file = this.<span class="apidocCodeKeywordSpan">getConfig</span>().customizations[this.name]
+
+// The user can provide footer and sidebar without extension,
+// so we add a default &#x27;.md&#x27; in that case. This test is &#x27;good enough&#x27; for Jingo
+if (this.file.indexOf(&#x27;.&#x27;) === -1) {
+  this.file += &#x27;.md&#x27;
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jingo.configurable.prototype.getProxyPath" id="apidoc.element.jingo.configurable.prototype.getProxyPath">
+        function <span class="apidocSignatureSpan">jingo.configurable.prototype.</span>getProxyPath
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getProxyPath = function () {
+  return configObject.getProxyPath(this.overrides.application &#x26;&#x26; this.overrides.application.proxyPath)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+get user () {
+  return req.user
+},
+get appTitle () {
+  return config.get(&#x27;application&#x27;).title
+},
+get proxyPath () {
+  return config.<span class="apidocCodeKeywordSpan">getProxyPath</span>()
+},
+get jingoVersion () {
+  return program.version()
+},
+get authentication () {
+  return config.get(&#x27;authentication&#x27;)
+},
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.jingo.gitmech" id="apidoc.module.jingo.gitmech">module jingo.gitmech</a></h1>
+
+
+
+
+
+
+
+
+    <h2>
+        <a href="#apidoc.element.jingo.gitmech.absPath" id="apidoc.element.jingo.gitmech.absPath">
+        function <span class="apidocSignatureSpan">jingo.gitmech.</span>absPath
+        <span class="apidocSignatureSpan">(path)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">absPath = function (path) {
+  return workTree + &#x27;/&#x27; + docSubdir + path
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  if ((Date.now() - this.timer) &#x3e; 30000) {
+    this.timer = Date.now()
+    this.cache = null
+  } else {
+    return this._exists
+  }
+
+  this._exists = fs.existsSync(Git.<span class="apidocCodeKeywordSpan">absPath</span>(this.file))
+
+  if (!this._exists) {
+    this.cache = null
+  }
+
+  return this._exists
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jingo.gitmech.add" id="apidoc.element.jingo.gitmech.add">
+        function <span class="apidocSignatureSpan">jingo.gitmech.</span>add
+        <span class="apidocSignatureSpan">(path, message, author, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">add = function (path, message, author, callback) {
+  gitSpawn([&#x27;add&#x27;, docSubdir + path], function (err) {
+    if (err) {
+      console.log(err)
+      callback(err)
+    } else {
+      this.commit(path, message, author, callback)
+    }
+  }.bind(this))
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+    fs.writeFile(this.pathname, content, function (err) {
+if (err) {
+  reject(err)
+  return
+}
+
+gitmech.<span class="apidocCodeKeywordSpan">add</span>(this.filename, message, this.author, function (err) {
+  if (err) {
+    reject(err)
+    return
+  }
+
+  resolve(content)
+})
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jingo.gitmech.commit" id="apidoc.element.jingo.gitmech.commit">
+        function <span class="apidocSignatureSpan">jingo.gitmech.</span>commit
+        <span class="apidocSignatureSpan">(path, message, author, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">commit = function (path, message, author, callback) {
+  var options
+  if (path) {
+    options = [&#x27;commit&#x27;, &#x27;--author=&#x22;&#x27; + author + &#x27;&#x22;&#x27;, &#x27;-m&#x27;, message, docSubdir + path]
+  } else {
+    options = [&#x27;commit&#x27;, &#x27;--author=&#x22;&#x27; + author + &#x27;&#x22;&#x27;, &#x27;-am&#x27;, message]
+  }
+  gitSpawn(options, function (err) {
+    this.shouldPush = true
+    callback(err)
+  }.bind(this))
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+add: function (path, message, author, callback) {
+  gitSpawn([&#x27;add&#x27;, docSubdir + path], function (err) {
+    if (err) {
+      console.log(err)
+      callback(err)
+    } else {
+      this.<span class="apidocCodeKeywordSpan">commit</span>(path, message, author, callback)
+    }
+  }.bind(this))
+},
+
+rm: function (path, message, author, callback) {
+  gitSpawn([&#x27;rm&#x27;, docSubdir + path], function (err) {
+    if (err) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jingo.gitmech.diff" id="apidoc.element.jingo.gitmech.diff">
+        function <span class="apidocSignatureSpan">jingo.gitmech.</span>diff
+        <span class="apidocSignatureSpan">(path, revisions, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">diff = function (path, revisions, callback) {
+  gitSpawn([ &#x27;diff&#x27;, &#x27;--no-color&#x27;, &#x27;-b&#x27;, revisions, &#x27;--&#x27;, docSubdir + path ], function (err, data) {
+    callback(err, typeof data !== &#x27;undefined&#x27; ? data.toString() : &#x27;&#x27;)
+  })
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+Page.prototype.fetchRevisionsDiff = function (revisions) {
+return new Promiserr(function (resolve, reject) {
+  if (this.error) {
+    resolve()
+    return
+  }
+
+  gitmech.<span class="apidocCodeKeywordSpan">diff</span>(this.filename, revisions, function (err, diff) {
+    if (err) {
+      this.error = err
+    }
+
+    resolve(diff)
+  }.bind(this))
+}.bind(this))
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jingo.gitmech.grep" id="apidoc.element.jingo.gitmech.grep">
+        function <span class="apidocSignatureSpan">jingo.gitmech.</span>grep
+        <span class="apidocSignatureSpan">(pattern, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">grep = function (pattern, callback) {
+  // TODO decide for -w
+  var args = [ &#x27;grep&#x27;, &#x27;--no-color&#x27;, &#x27;-F&#x27;, &#x27;-n&#x27;, &#x27;-i&#x27;, &#x27;-I&#x27;, pattern ]
+  if (docSubdir !== &#x27;&#x27;) {
+    args.push(docSubdir)
+  }
+  gitSpawn(args, function (err, data) {
+    if (err) {
+      callback(err)
+      return
+    }
+    var result
+    if (data) {
+      result = data.toString().split(&#x27;\n&#x27;)
+    } else {
+      result = []
+    }
+
+    // Search in the file names
+    gitSpawn([ &#x27;ls-files&#x27;, docSubdir + &#x27;*.md&#x27; ], function (err, data) {
+      if (data) {
+        var patternLower = pattern.toLowerCase()
+
+        data.toString().split(&#x27;\n&#x27;).forEach(function (name) {
+          var nameLower = path.basename(name).toLowerCase()
+          if (nameLower.search(patternLower) &#x3e;= 0) {
+            result.push(path.basename(name))
+          }
+        })
+      }
+
+      callback(err, result)
+    })
+  })
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+      })
+    }
+  },
+
+  pages: {
+
+    findString: function (string, callback) {
+      gitmech.<span class="apidocCodeKeywordSpan">grep</span>(string, function (err, items) {
+        callback(err, items)
+      })
+    }
+  }
+}
+
+Promiserr.promisifyAll(models.pages)
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jingo.gitmech.hashes" id="apidoc.element.jingo.gitmech.hashes">
+        function <span class="apidocSignatureSpan">jingo.gitmech.</span>hashes
+        <span class="apidocSignatureSpan">(path, howMany, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">hashes = function (path, howMany, callback) {
+  gitSpawn([&#x27;log&#x27;, &#x27;-&#x27; + howMany, &#x27;--reverse&#x27;, &#x27;--no-notes&#x27;, &#x27;--pretty=format:%h&#x27;, &#x27;--&#x27;, docSubdir + path], function (err, data) {
+    var result = (data &#x26;&#x26; !err) ? data.toString().split(&#x27;\n&#x27;) : []
+    callback(err, result)
+  })
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+  return new Promiserr(function (resolve, reject) {
+    if (this.error) {
+resolve()
+return
+    }
+
+    gitmech.<span class="apidocCodeKeywordSpan">hashes</span>(this.filename, howmany, function (err, hashes) {
+this.lastCommand = &#x27;hashes&#x27;
+
+if (err) {
+  this.error = err
+} else {
+  this.hashes = hashes
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jingo.gitmech.lastMessage" id="apidoc.element.jingo.gitmech.lastMessage">
+        function <span class="apidocSignatureSpan">jingo.gitmech.</span>lastMessage
+        <span class="apidocSignatureSpan">(path, revision, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">lastMessage = function (path, revision, callback) {
+  gitSpawn([&#x27;log&#x27;, &#x27;-1&#x27;, revision, &#x27;--no-notes&#x27;, &#x27;--pretty=format:%s&#x27;, &#x27;--&#x27;, docSubdir + path], function (err, data) {
+    callback(err, data.toString().trim())
+  })
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+Page.prototype.fetchLastCommitMessage = function () {
+  return new Promiserr(function (resolve, reject) {
+    if (this.error) {
+resolve()
+return
+    }
+
+    gitmech.<span class="apidocCodeKeywordSpan">lastMessage</span>(this.filename, &#x27;HEAD&#x27;, function (err, message) {
+this.lastCommand = &#x27;lastMessage&#x27;
+
+if (err) {
+  this.error = err
+} else {
+  this.lastCommitMessage = message
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jingo.gitmech.log" id="apidoc.element.jingo.gitmech.log">
+        function <span class="apidocSignatureSpan">jingo.gitmech.</span>log
+        <span class="apidocSignatureSpan">(path, version, howMany, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">log = function (path, version, howMany, callback) {
+  if (typeof howMany === &#x27;function&#x27;) {
+    callback = howMany
+    howMany = 1
+  }
+
+  gitSpawn([&#x27;log&#x27;, &#x27;-&#x27; + howMany, &#x27;--reverse&#x27;, &#x27;--no-notes&#x27;, &#x27;--pretty=format:%h%n%H%n%an%n%ae%n%aD%n%ar%n%at%n%s&#x27;, version, &#x27;--&#x27;,
+docSubdir + path], function (err, data) {
+    var logdata = data ? data.toString().split(&#x27;\n&#x27;) : []
+    var group
+    var metadata = []
+
+    if (err) {
+      callback(err)
+      return
+    }
+
+    for (var i = Math.floor(logdata.length / 8); i-- &#x3e; 0;) {
+      group = logdata.slice(i * 8, (i + 1) * 8)
+      metadata.push({
+        name: path.replace(&#x27;.md&#x27;, &#x27;&#x27;),
+        hash: group[0],
+        hashRef: group[0],
+        fullhash: group[1],
+        author: group[2],
+        email: group[3],
+        date: group[4],
+        relDate: group[5],
+        timestamp: group[6],
+        subject: group[7]
+      })
+    }
+
+    if (metadata[0]) {
+      metadata[0].hashRef = &#x27;&#x27; // This can be used linking this version, but needs to be empty for HEAD
+    }
+
+    if (howMany === 1) {
+      metadata = metadata[0]
+    }
+
+    callback(null, metadata)
+  })
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+       .option(&#x27;-c, --config &#x3c;path&#x3e;&#x27;, &#x27;Specify the config file&#x27;)
+       .option(&#x27;-#, --hash-string &#x3c;string&#x3e;&#x27;, &#x27;Create an hash for a string&#x27;)
+       .option(&#x27;-l, --local&#x27;, &#x27;Listen on localhost only&#x27;)
+       .option(&#x27;-s, --sample-config&#x27;, &#x27;Dumps a config file template and exits&#x27;)
+       .parse(process.argv)
+
+if (program.sampleConfig) {
+  console.<span class="apidocCodeKeywordSpan">log</span>(config.sample())
+  process.exit(0)
+}
+
+if (program.hashString) {
+  console.log(tools.hashify(program.hashString))
+  process.exit(0)
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jingo.gitmech.ls" id="apidoc.element.jingo.gitmech.ls">
+        function <span class="apidocSignatureSpan">jingo.gitmech.</span>ls
+        <span class="apidocSignatureSpan">(pattern, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">ls = function (pattern, callback) {
+  gitExec([ &#x27;ls-tree&#x27;, &#x27;--name-only&#x27;, &#x27;-r&#x27;, &#x27;HEAD&#x27;, &#x27;--&#x27;, docSubdir + pattern ], function (err, data) {
+    if (err) {
+      data = &#x27;&#x27;
+    }
+    callback(null, data.toString().split(&#x27;\n&#x27;).filter(function (v) {
+      return v !== &#x27;&#x27;
+    }))
+  })
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  Configurable.call(this)
+}
+
+Pages.prototype = Object.create(Configurable.prototype)
+
+Pages.prototype.fetch = function (pagen) {
+  return new Promiserr(function (resolve, reject) {
+    gitmech.<span class="apidocCodeKeywordSpan">ls</span>(&#x27;*.md&#x27;, function (err, list) {
+var model
+var Promisers = []
+
+if (err) {
+  reject(err)
+  return
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jingo.gitmech.mv" id="apidoc.element.jingo.gitmech.mv">
+        function <span class="apidocSignatureSpan">jingo.gitmech.</span>mv
+        <span class="apidocSignatureSpan">(path, newPath, message, author, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">mv = function (path, newPath, message, author, callback) {
+  gitSpawn([&#x27;mv&#x27;, &#x27;-f&#x27;, docSubdir + path, docSubdir + newPath], function (err) {
+    if (err) {
+      console.log(err)
+      callback(err)
+    } else {
+      this.commit(path, message, author, callback)
+    }
+  }.bind(this))
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  return new Promiserr(function (resolve, reject) {
+// Cannot rename if the file already exists
+if (fs.existsSync(gitmech.absPath(newFilename))) {
+  reject()
+  return
+}
+
+gitmech.<span class="apidocCodeKeywordSpan">mv</span>(this.filename,
+           newFilename,
+           &#x27;Page renamed (&#x27; + this.filename + &#x27; =&#x3e; &#x27; + newFilename + &#x27;)&#x27;,
+           this.author,
+           function (err) {
+             if (err) {
+               reject()
+             } else {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jingo.gitmech.pull" id="apidoc.element.jingo.gitmech.pull">
+        function <span class="apidocSignatureSpan">jingo.gitmech.</span>pull
+        <span class="apidocSignatureSpan">(callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">pull = function (callback) {
+  if (this.pulling || this.remote === &#x27;&#x27; || this.branch === &#x27;&#x27;) {
+    callback(null)
+    return
+  }
+
+  this.remoteExists(this.remote, function (err, exists) {
+    if (err) {
+      callback(err)
+      return
+    }
+    if (!exists) {
+      callback(&#x27;Remote does not exist &#x27; + &#x27;(&#x27; + this.remote + &#x27;)&#x27;)
+      return
+    }
+    this.pulling = true
+
+    gitSpawn([&#x27;pull&#x27;, this.remote, this.branch], function (err) {
+      this.pulling = false
+      if (err &#x26;&#x26; err.toString().match(/^Error:/)) {
+        var lines = err.toString().split(&#x27;\n&#x27;)
+        callback(&#x27;Pull unsucessfull (&#x27; + lines[1] + &#x27;)&#x27;)
+        return
+      }
+      callback(null)
+    }.bind(this))
+  }.bind(this))
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+http.createServer(app).listen(config.get(&#x27;server&#x27;).port, listenAddr, function () {
+  console.log((new Date()) + &#x27; - Jingo%sserver v%s listening on port %s&#x27;, config.get(&#x27;server&#x27;).localOnly ? &#
+x27; (local) &#x27; : &#x27; &#x27;, program.version(), config.get(&#x27;server&#x27;).port)
+})
+
+if (config.get(&#x27;application&#x27;).pushInterval &#x26;&#x26; refspec.length &#x3e; 0) {
+  setInterval(function () {
+    Git.<span class="apidocCodeKeywordSpan">pull</span>(function (err) {
+      if (err) {
+        console.log(&#x27;Error: &#x27; + err)
+      } else {
+        Git.push(function (err) {
+          if (err) {
+            console.log(&#x27;Error: &#x27; + err)
+          }
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jingo.gitmech.push" id="apidoc.element.jingo.gitmech.push">
+        function <span class="apidocSignatureSpan">jingo.gitmech.</span>push
+        <span class="apidocSignatureSpan">(callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">push = function (callback) {
+  if (this.remote === &#x27;&#x27; || this.branch === &#x27;&#x27;) {
+    callback(null)
+    return
+  }
+
+  // No commits, no push
+  if (this.pushing || !this.shouldPush) {
+    callback(null)
+    return
+  }
+
+  this.remoteExists(this.remote, function (err, exists) {
+    if (err) {
+      callback(err)
+      return
+    }
+    if (!exists) {
+      callback(&#x27;Remote does not exist &#x27; + &#x27;(&#x27; + this.remote + &#x27;)&#x27;)
+      return
+    }
+
+    this.pushing = true
+
+    gitSpawn([&#x27;push&#x27;, this.remote, this.branch], function (err) {
+      this.pushing = false
+      if (err &#x26;&#x26; err.toString().match(/^Error:/)) {
+        var lines = err.toString().split(&#x27;\n&#x27;)
+        callback(&#x27;Push unsucessfull (&#x27; + lines[1] + &#x27;)&#x27;)
+        return
+      }
+      this.shouldPush = false
+      callback(null)
+    }.bind(this))
+  }.bind(this))
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+  if (config.get(&#x27;application&#x27;).pushInterval &#x26;&#x26; refspec.length &#x3e; 0) {
+setInterval(function () {
+  Git.pull(function (err) {
+    if (err) {
+      console.log(&#x27;Error: &#x27; + err)
+    } else {
+      Git.<span class="apidocCodeKeywordSpan">push</span>(function (err) {
+        if (err) {
+          console.log(&#x27;Error: &#x27; + err)
+        }
+      })
+    }
+  })
+}, config.get(&#x27;application&#x27;).pushInterval * 1000)
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jingo.gitmech.remoteExists" id="apidoc.element.jingo.gitmech.remoteExists">
+        function <span class="apidocSignatureSpan">jingo.gitmech.</span>remoteExists
+        <span class="apidocSignatureSpan">(remote, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">remoteExists = function (remote, callback) {
+  gitSpawn([&#x27;remote&#x27;], function (err, data) {
+    if (err) {
+      callback(err)
+      return
+    }
+    var remotes = (data ? data.toString().split(&#x27;\n&#x27;) : [])
+    callback(null, remotes.indexOf(remote) !== -1)
+  })
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+  pull: function (callback) {
+if (this.pulling || this.remote === &#x27;&#x27; || this.branch === &#x27;&#x27;) {
+  callback(null)
+  return
+}
+
+this.<span class="apidocCodeKeywordSpan">remoteExists</span>(this.remote, function (err, exists) {
+  if (err) {
+    callback(err)
+    return
+  }
+  if (!exists) {
+    callback(&#x27;Remote does not exist &#x27; + &#x27;(&#x27; + this.remote + &#x27;)&#x27;)
+    return
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jingo.gitmech.revert" id="apidoc.element.jingo.gitmech.revert">
+        function <span class="apidocSignatureSpan">jingo.gitmech.</span>revert
+        <span class="apidocSignatureSpan">(path, revision, author, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">revert = function (path, revision, author, callback) {
+  gitExec([&#x27;checkout&#x27;, revision, docSubdir + path], function (err, data) {
+    if (err) {
+      callback(err, (&#x27;&#x27; + data).toString().trim())
+      return
+    }
+    gitMech.commit(path, &#x27;Reverted to &#x27; + revision, author, function (err, data) {
+      callback(err, (&#x27;&#x27; + data).toString().trim())
+    })
+  })
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+}
+
+if (this.revision === &#x27;HEAD&#x27;) {
+  reject()
+  return
+}
+
+gitmech.<span class="apidocCodeKeywordSpan">revert</span>(this.filename, this.revision, this.author, function (err, data) {
+  if (err) {
+    this.error = err
+    reject(err)
+    return
+  }
+  resolve(data)
+}.bind(this))
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jingo.gitmech.rm" id="apidoc.element.jingo.gitmech.rm">
+        function <span class="apidocSignatureSpan">jingo.gitmech.</span>rm
+        <span class="apidocSignatureSpan">(path, message, author, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">rm = function (path, message, author, callback) {
+  gitSpawn([&#x27;rm&#x27;, docSubdir + path], function (err) {
+    if (err) {
+      console.log(err)
+      callback(err)
+    } else {
+      this.commit(path, message, author, callback)
+    }
+  }.bind(this))
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+Page.prototype.remove = function () {
+return new Promiserr(function (resolve, reject) {
+  if (this.error) {
+    resolve()
+    return
+  }
+  gitmech.<span class="apidocCodeKeywordSpan">rm</span>(this.filename, &#x27;Page removed (&#x27; + this.wikiname + &#x27;)&#x27
+;, this.author, function (err) {
+    if (err) {
+      reject(err)
+      return
+    }
+    resolve()
+  })
+}.bind(this))
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jingo.gitmech.setup" id="apidoc.element.jingo.gitmech.setup">
+        function <span class="apidocSignatureSpan">jingo.gitmech.</span>setup
+        <span class="apidocSignatureSpan">(gitBin, repoDir, repoDocSubdir, refspec, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">setup = function (gitBin, repoDir, repoDocSubdir, refspec, callback) {
+  this.gitBin = gitBin || &#x27;git&#x27;
+
+  childProcess.exec(this.gitBin + &#x27; --version&#x27;, function (err, stdout, stderr) {
+    if (err !== null || stderr !== &#x27;&#x27;) {
+      callback(&#x27;Cannot run git (tried with &#x27; + this.gitBin + &#x27;)&#x27;)
+      return
+    }
+
+    var version = stdout.trim().split(&#x27; &#x27;)
+
+    if (version[0] !== &#x27;git&#x27; || version.length &#x3c; 3) {
+      callback(&#x27;The provided git binary (&#x27; + this.gitBin + &#x22;) doesn&#x27;t look as git to me.&#x22;)
+      return
+    }
+
+    version = version[2]
+
+    var splitted = version.split(&#x27;.&#x27;)
+    if (splitted.length &#x3e; 3) {
+      version = splitted.slice(0, 3 - splitted.length).join(&#x27;.&#x27;)
+    }
+
+    if (splitted.length === 2) {
+      version = splitted.concat([0]).join(&#x27;.&#x27;)
+    }
+
+    if (!semver.valid(version)) {
+      callback(&#x27;Unrecognized git semver (&#x27; + version + &#x27;)&#x27;)
+      return
+    }
+
+    try {
+      fs.statSync(repoDir)
+    } catch (e) {
+      callback(&#x27;Bad repository path (not exists): &#x27; + repoDir)
+      return
+    }
+
+    docSubdir = repoDocSubdir.trim().replace(/^\/|\/$/g, &#x27;&#x27;)
+    if (docSubdir !== &#x27;&#x27;) {
+      docSubdir = docSubdir + &#x27;/&#x27;
+    }
+
+    try {
+      fs.statSync(repoDir + &#x27;/&#x27; + docSubdir)
+    } catch (e) {
+      callback(&#x27;Bad document subdirectory (not exists): &#x27; + repoDir + &#x27;/&#x27; + docSubdir)
+      return
+    }
+
+    try {
+      var gitDir = path.join(repoDir, &#x27;.git&#x27;)
+      fs.statSync(gitDir)
+      workTree = repoDir
+      gitCommands = [&#x27;--git-dir=&#x27; + gitDir, &#x27;--work-tree=&#x27; + workTree]
+    } catch (e) {
+      callback(&#x27;Bad repository path (not initialized): &#x27; + repoDir)
+      return
+    }
+
+    if (refspec.length &#x3e; 0) {
+      this.remote = refspec[0].trim()
+      this.branch = refspec[1] ? refspec[1].trim() : &#x27;master&#x27;
+    }
+
+    callback(null, version)
+  }.bind(this))
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+if (!config.validate()) {
+  console.log(&#x27;Error: &#x27; + config.getError())
+  process.exit(-1)
+}
+
+var refspec = config.get(&#x27;application&#x27;).remote.split(/\s+/)
+
+Git.<span class="apidocCodeKeywordSpan">setup</span>(config.get(&#x27;application&#x27;).git,
+config.get(&#x27;application&#x27;).repository,
+config.get(&#x27;application&#x27;).docSubdir,
+refspec, function (err, version) {
+  if (err) {
+    console.log(err)
+    process.exit(-1)
+  }
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jingo.gitmech.show" id="apidoc.element.jingo.gitmech.show">
+        function <span class="apidocSignatureSpan">jingo.gitmech.</span>show
+        <span class="apidocSignatureSpan">(path, version, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">show = function (path, version, callback) {
+  gitSpawn([&#x27;show&#x27;, version + &#x27;:&#x27; + docSubdir + path], function (err, data) {
+    if (err) {
+      callback(err)
+    } else {
+      callback(null, data.toString())
+    }
+  })
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+Page.prototype.fetchContent = function () {
+  return new Promiserr(function (resolve, reject) {
+    if (this.error) {
+resolve()
+return
+    }
+
+    gitmech.<span class="apidocCodeKeywordSpan">show</span>(this.filename, this.revision, function (err, content) {
+this.lastCommand = &#x27;show&#x27;
+
+content = content || &#x27;&#x27;
+
+if (err) {
+  this.error = err
+} else {
+...</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.jingo.locker" id="apidoc.module.jingo.locker">module jingo.locker</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.jingo.locker.count" id="apidoc.element.jingo.locker.count">
+        function <span class="apidocSignatureSpan">jingo.locker.</span>count
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">count = function () {
+  return Object.keys(this.locks).length
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jingo.locker.getLock" id="apidoc.element.jingo.locker.getLock">
+        function <span class="apidocSignatureSpan">jingo.locker.</span>getLock
+        <span class="apidocSignatureSpan">(page)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getLock = function (page) {
+  return this.locks[page] ? this.locks[page] : null
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+}
+
+Page.prototype.isSidebar = function () {
+return this.name === &#x27;_sidebar&#x27;
+}
+
+Page.prototype.lock = function (user) {
+var lock = locker.<span class="apidocCodeKeywordSpan">getLock</span>(this.name)
+
+if (lock &#x26;&#x26; lock.user.asGitAuthor !== user.asGitAuthor) {
+  this.lockedBy = lock.user
+  return false
+}
+
+locker.lock(this.name, user)
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jingo.locker.lock" id="apidoc.element.jingo.locker.lock">
+        function <span class="apidocSignatureSpan">jingo.locker.</span>lock
+        <span class="apidocSignatureSpan">(page, user)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">lock = function (page, user) {
+  var d = new Date()
+  this.locks[page] = {
+    user: user,
+    ts: d.getTime() + (d.getTimezoneOffset() * 60 * 1000)
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var lock = locker.getLock(this.name)
+
+if (lock &#x26;&#x26; lock.user.asGitAuthor !== user.asGitAuthor) {
+  this.lockedBy = lock.user
+  return false
+}
+
+locker.<span class="apidocCodeKeywordSpan">lock</span>(this.name, user)
+this.lockedBy = user
+return true
+}
+
+Page.prototype.unlock = function (user) {
+this.lockedBy = null
+locker.unlock(this.name)
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jingo.locker.purge" id="apidoc.element.jingo.locker.purge">
+        function <span class="apidocSignatureSpan">jingo.locker.</span>purge
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">purge = function () {
+  var d = new Date()
+  var now = d.getTime() + (d.getTimezoneOffset() * 60 * 1000)
+
+  for (var page in this.locks) {
+    if ((now - this.locks[page].ts) &#x3e; this.purgeTime) {
+      this.unlock(page)
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+        this.unlock(page)
+      }
+    }
+  }
+}
+
+setTimeout(function () {
+  Locker.<span class="apidocCodeKeywordSpan">purge</span>()
+}, 3600 * 1000)
+
+module.exports = Locker
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jingo.locker.reset" id="apidoc.element.jingo.locker.reset">
+        function <span class="apidocSignatureSpan">jingo.locker.</span>reset
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">reset = function () {
+  this.locks = {}
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jingo.locker.unlock" id="apidoc.element.jingo.locker.unlock">
+        function <span class="apidocSignatureSpan">jingo.locker.</span>unlock
+        <span class="apidocSignatureSpan">(page)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">unlock = function (page) {
+  delete this.locks[page]
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+purge: function () {
+  var d = new Date()
+  var now = d.getTime() + (d.getTimezoneOffset() * 60 * 1000)
+
+  for (var page in this.locks) {
+    if ((now - this.locks[page].ts) &#x3e; this.purgeTime) {
+      this.<span class="apidocCodeKeywordSpan">unlock</span>(page)
+    }
+  }
+}
+}
+
+setTimeout(function () {
+Locker.purge()
+...</pre></li>
+    </ul>
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.jingo.models" id="apidoc.module.jingo.models">module jingo.models</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.jingo.models.Page" id="apidoc.element.jingo.models.Page">
+        function <span class="apidocSignatureSpan">jingo.models.</span>Page
+        <span class="apidocSignatureSpan">(name, revision)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Page(name, revision) {
+  name = name || &#x27;&#x27;
+  this.setNames(name)
+  this.revision = revision || &#x27;HEAD&#x27;
+  this.content = &#x27;&#x27;
+  this.title = &#x27;&#x27;
+  this.metadata = {}
+  this.error = &#x27;&#x27;
+  this.author = &#x27;&#x27;
+  this.lockedBy = null
+  this.hashes = []
+  this.lastCommand = &#x27;&#x27;
+  this.lastCommitMessage = &#x27;&#x27;
+  Configurable.call(this)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  }
+
+  if (this.cache) {
+    cb &#x26;&#x26; cb(null, this.cache)
+    return
+  }
+
+  var page = new models.<span class="apidocCodeKeywordSpan">Page</span>(this.getConfig().customizations[this.name])
+
+  page.fetch().then(function () {
+    cb &#x26;&#x26; cb(null, this.cache = renderer.render(page.content))
+  })
+}
+
+Component.prototype.fetchSync = function () {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jingo.models.Pages" id="apidoc.element.jingo.models.Pages">
+        function <span class="apidocSignatureSpan">jingo.models.</span>Pages
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Pages() {
+  this.models = []
+  this.total = 0
+  Configurable.call(this)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jingo.models.use" id="apidoc.element.jingo.models.use">
+        function <span class="apidocSignatureSpan">jingo.models.</span>use
+        <span class="apidocSignatureSpan">(git)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">use = function (git) {
+  gitmech = git
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+if (config.get(&#x27;server&#x27;).baseUrl === &#x27;&#x27;) {
+  app.locals.baseUrl = &#x27;//&#x27; + config.get(&#x27;server&#x27;).hostname + &#x27;:&#x27; + config.get(&#x27;server&#x27;).
+port
+} else {
+  app.locals.baseUrl = config.get(&#x27;server&#x27;).baseUrl
+}
+
+// View helpers
+app.<span class="apidocCodeKeywordSpan">use</span>(function (req, res, next) {
+  res.locals = {
+    get user () {
+      return req.user
+    },
+    get appTitle () {
+      return config.get(&#x27;application&#x27;).title
+    },
+...</pre></li>
+    </ul>
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.jingo.renderer" id="apidoc.module.jingo.renderer">module jingo.renderer</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.jingo.renderer.render" id="apidoc.element.jingo.renderer.render">
+        function <span class="apidocSignatureSpan">jingo.renderer.</span>render
+        <span class="apidocSignatureSpan">(content)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">render = function (content) {
+  Marked.setOptions({
+    pedantic: configuration.getConfig().application.pedanticMarkdown,
+    breaks: configuration.getConfig().application.gfmBreaks
+  })
+
+  var text = extractTags(content)
+  text = evalTags(text)
+  text = applyDirectives(text)
+  return Marked(text)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+     .use(require(&#x27;../routes/misc&#x27;))
+
+  // Server error
+  app.use(function (err, req, res, next) {
+    res.locals.title = &#x27;500 - Internal server error&#x27;
+    res.statusCode = 500
+    console.log(err)
+    res.<span class="apidocCodeKeywordSpan">render</span>(&#x27;500.jade&#x27;, {
+      message: &#x27;Sorry, something went wrong and I cannot recover. If you think this might be a bug in Jingo, please file a
+detailed report about what you were doing here: https://github.com/claudioc/jingo/issues . Thank you!&#x27;,
+      error: err
+    })
+  })
+
+  return app
+}
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.jingo.tools" id="apidoc.module.jingo.tools">module jingo.tools</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.jingo.tools.hashify" id="apidoc.element.jingo.tools.hashify">
+        function <span class="apidocSignatureSpan">jingo.tools.</span>hashify
+        <span class="apidocSignatureSpan">(str)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">hashify = function (str) {
+  var shasum = cryptoz.createHash(&#x27;sha1&#x27;)
+  shasum.update(str)
+  return shasum.digest(&#x27;hex&#x27;)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+if (program.sampleConfig) {
+  console.log(config.sample())
+  process.exit(0)
+}
+
+if (program.hashString) {
+  console.log(tools.<span class="apidocCodeKeywordSpan">hashify</span>(program.hashString))
+  process.exit(0)
+}
+
+if (!program.config || !fs.existsSync(program.config)) {
+  program.help()
+  process.exit(-1)
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jingo.tools.isAuthorized" id="apidoc.element.jingo.tools.isAuthorized">
+        function <span class="apidocSignatureSpan">jingo.tools.</span>isAuthorized
+        <span class="apidocSignatureSpan">(email, pattern, emptyEmailMatches)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isAuthorized = function (email, pattern, emptyEmailMatches) {
+  // Special case where the email is not returned by the backend authorization system
+  if (email === &#x27;jingouser&#x27;) {
+    return !!emptyEmailMatches
+  }
+
+  if (!email || !email.match(/\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}\b/i)) {
+    return false
+  }
+
+  if (!pattern || pattern.trim() === &#x27;&#x27;) {
+    return true
+  }
+
+  var tests = pattern.split(&#x27;,&#x27;).map(function (str) {
+    return str.trim()
+  })
+  var expr
+  for (var i = 0; i &#x3c; tests.length; i++) {
+    try {
+      expr = expr || !!email.match(new RegExp(&#x27;^&#x27; + tests[i] + &#x27;$&#x27;, &#x27;i&#x27;))
+    } catch (e) { // Invalid regular expression
+      return false
+    }
+  }
+
+  return expr
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
